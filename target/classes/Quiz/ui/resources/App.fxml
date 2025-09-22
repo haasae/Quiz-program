@@ -1,1 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane id="pane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets= "@styles.css" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: darkblue;" fx:controller="Quiz.ui.AppController">
+
+    <top>
+        <BorderPane>
+            <bottom>
+                <HBox spacing="15" >
+                    <Button fx:id="startButton" prefHeight="50.0" prefWidth="100.0" onAction="#handleStartButtonAction" text="START QUIZ" styleClass="start-button"/>
+                    <Button fx:id="exitButton" prefHeight="50.0" prefWidth="100.0" onAction="#handleExitButtonAction" text="Avslutt" styleClass="avslutt-button"/>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </top>
+
+    <center> 
+        <VBox fx:id="questionsOptionsBox" spacing="15">
+            <Label fx:id="labelFirst" style="-fx-font-weight: bold; -fx-font-family: Arial; -fx-text-fill: white;" />
+            <RadioButton fx:id="radio1" style="-fx-font-weight: bold; -fx-font-family: Arial; -fx-text-fill: white;"/>
+            <RadioButton fx:id="radio2" style="-fx-font-weight: bold; -fx-font-family: Arial; -fx-text-fill: white;"/>
+            <RadioButton fx:id="radio3" style="-fx-font-weight: bold; -fx-font-family: Arial; -fx-text-fill: white;"/>
+            <RadioButton fx:id="radio4" style="-fx-font-weight: bold; -fx-font-family: Arial; -fx-text-fill: white;"/>
+            <RadioButton fx:id="radio5" style="-fx-font-weight: bold; -fx-font-family: Arial; -fx-text-fill: white;"/>
+            <Label fx:id="labelVerifyAnswer" style="-fx-font-weight: bold; -fx-font-family: Arial; -fx-text-fill: white;"/>
+            <Button fx:id="saveAnswerButton" onAction= "#handleSaveAnswerButtonAction" text="Svar" style="-fx-background-color: white;"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <BorderPane>
+            <left>
+                <VBox fx:id="Bottombox" spacing="5" BorderPane.alignment="CENTER">
+                    <Button fx:id="nextQuestionButton" onAction= "#handleNextQuestionButtonAction" text="Neste spørsmål" BorderPane.alignment="CENTER_LEFT" style="-fx-background-color: white;"/>
+                </VBox>
+            </left>
+            <top>
+                <VBox fx:id="Resultbox" spacing="5" BorderPane.alignment="CENTER">
+                    <Label fx:id="scoreLabel" style="-fx-font-weight: bold; -fx-font-family: Arial; -fx-text-fill: white;"/> 
+                    <Button fx:id="restartButton" onAction = "#handleRestartButtonAction" text="Prøv på nytt" BorderPane.alignment="CENTER_RIGHT" style="-fx-background-color: white;"/>
+                </VBox>
+            </top>
+        </BorderPane>
+    </bottom>
+
+
+
+</BorderPane>

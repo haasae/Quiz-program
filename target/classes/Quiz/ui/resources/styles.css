@@ -1,0 +1,97 @@
+.start-button,
+.start-button *,
+.start-button :after,
+.start-button :before,
+.start-button:after,
+.start-button:before {
+  border: 0;
+  box-sizing: border-box;
+}
+
+.start-button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    font-weight: 900;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: radial-gradient(#000, #fff);
+    mask-image: radial-gradient(#000, #fff);
+    padding: 0;
+    text-transform: uppercase;
+}
+.start-button:disabled {
+    cursor: default;
+}
+.start-button:-moz-focusring {
+    outline: auto;
+}
+.start-button svg {
+    display: block;
+}
+.start-button {
+    border-width: 2px;
+    border-radius: 10px;
+}
+.start-button:hover {
+    color: #999;
+}
+
+.avslutt-button {
+    -fx-background-image: url("Avslutt_btn.png");
+    background-image: url("Avslutt_btn.png");
+    -fx-background-size: cover;
+    background-size: cover;
+    -fx-background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    -fx-text-fill: transparent;
+    -webkit-text-fill-color:transparent;
+    -fx-background-color: transparent; /* Set background color as transparent */
+    background-color: transparent;
+    -fx-border: none; /* Remove border */
+    border: none;
+}
+
+.start-button {
+    -fx-background-image: url("Start_btn.png");
+    background-image: url("Start_btn.png");
+    -fx-background-size: cover;
+    background-size: cover;
+    -fx-background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    -fx-text-fill: transparent;
+    -webkit-text-fill-color:transparent;
+    -fx-background-color: transparent; /* Set background color as transparent */
+    background-color: transparent;
+    -fx-border: none; /* Remove border */
+    border: none;
+}
+
+#pane {
+    -fx-background-image: url("quiz_template.jpg");
+    background-image: url("quiz_template.jpg");
+    -fx-background-size: 350 400;
+    background-size: 350 350;
+    -fx-background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    -fx-text-fill: transparent;
+    -webkit-text-fill-color:transparent;
+    -fx-background-color: transparent; /* Set background color as transparent */
+    background-color: transparent;
+    -fx-border: none; /* Remove border */
+    border: none;
+}
+
+
+
+
+
+
