@@ -1,0 +1,66 @@
+package Quiz.game;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Question {
+
+    private String question;
+    private List<String> options = new ArrayList<>();
+    private int correctAnswerIndex;
+
+    public Question(String question, List<String> options, int correctAnswerIndex) {
+        verifyQuestion(question, options, correctAnswerIndex);
+        this.question = question;
+        this.options = options;
+        this.correctAnswerIndex = correctAnswerIndex;
+    }
+
+    public void verifyQuestion(String question, List<String> options, int correctAnswerIndex) {
+        if (correctAnswerIndex < 0 || correctAnswerIndex >= options.size()) {
+            throw new IllegalArgumentException("Indexen er ugyldig");
+        } else if (question.equals(null) || question.equals("")) {
+            throw new IllegalArgumentException("Ugyldig spørsmål");
+        } else if (options.isEmpty() || options.size() > 5) {
+            throw new IllegalArgumentException("Må ha 2 - 5 alternativer");
+        }
+
+    }
+
+    public String getQuestion() {
+        return question;
+
+    }
+
+    public List<String> getOptions() {
+        return options;
+    }
+
+    public int getCorrectAnswerIndex() {
+        return correctAnswerIndex;
+    }
+
+    public void addOption(String option) {
+        options.add(option);
+    }
+
+    public void updateQuestion(String newQuestion) {
+        this.question = newQuestion;
+    }
+
+    public void updateOption(int index, String newOption) {
+        if (index >= 0 && index < options.size()) {
+            options.set(index, newOption);
+        }
+    }
+
+    public boolean isCorrectAnswer(int userAnswerIndex) {
+        return userAnswerIndex == correctAnswerIndex;
+    }
+
+    @Override
+    public String toString() {
+        return "Question [question=" + question + ", options=" + options + "]";
+    }
+
+}
