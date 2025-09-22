@@ -1,0 +1,42 @@
+package Quiz;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+import Quiz.game.Question;
+
+import java.util.Arrays;
+
+public class QuestionTest {
+
+    @Test
+    public void testQuestionConstructorValid() {
+        Question question = new Question("What is Java?", Arrays.asList("Programming language", "Coffee", "Island"), 0);
+        assertEquals("What is Java?", question.getQuestion());
+        assertEquals(3, question.getOptions().size());
+        assertEquals(0, question.getCorrectAnswerIndex());
+    }
+
+    @Test
+    public void testQuestionConstructorInvalidIndex() {
+        assertThrows(IllegalArgumentException.class, () -> new Question("What is Java?", Arrays.asList("Programming language", "Coffee", "Island"), 3));
+    }
+
+
+    @Test
+    public void testQuestionConstructorNegativeIndex() {
+        assertThrows(IllegalArgumentException.class, () -> new Question("What is Java?", Arrays.asList("Programming language", "Coffee", "Island"), -1));
+    }
+
+    @Test
+    public void testOptionsIsEmpty() {
+        assertThrows(IllegalArgumentException.class, () -> new Question("What is Java?", Arrays.asList(), 0));
+    }
+
+    @Test
+    public void testToManyOptions(){
+        assertThrows(IllegalArgumentException.class, () -> new Question("What is Java?", Arrays.asList("1", "2", "3", "4", "5", "6"), 0));
+
+    }
+
+}
