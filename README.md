@@ -1,3 +1,4 @@
-# Quizprogram med Java fra V2024
+# Quiz with Java
 
-Dette er et enkelt quizprogram programmert i Java. Laget Våren 2024
+Basic quiz-application with Java and CSS. Code can be copied and questions changed for own use
+
